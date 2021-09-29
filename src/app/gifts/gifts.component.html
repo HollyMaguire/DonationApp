@@ -1,0 +1,68 @@
+<div class= giftPage>
+<p class="heading"><strong>Gifts</strong></p>
+<form>
+    <div class="check">CHECK FOR MONTHLY RECURRING GIFT</div>
+    <div class="container">
+    <label for="GeneralDonation">GENERAL DONATION FUND</label>
+    <input type="number" [formControl]="giftFill" id="GeneralDonation" /> <div class="checkbox"><input type="checkbox"> </div>
+    </div>
+    <div class="container">
+    <label for="runForSon">RUN FOR THE SON 2017</label>
+    <input type="number" [formControl]="giftFill" id="runForSon" /> <div class="checkbox"><input type="checkbox"> </div>
+    </div>
+    <div class="container">
+    <label for="missionTrip">MISSION TRIP SPONSORSHIP</label>
+    <input type="number" [formControl]="giftFill" id="missionTrip" /><div class="checkbox"><input type="checkbox"> </div>
+    </div>
+    <div class="container">
+    <label for="memorial">MEMORIAL GIFT</label>
+    <input type="number" [formControl]="giftFill" id="memorial" /> <div class="checkbox"><input type="checkbox"> </div>
+    </div>
+    <div class="formButtons">
+        <input type="reset" value="Clear">    
+        <input  type="submit" value="Continue"></div>
+</form>
+</div>
+
+<style>
+.formButtons {
+    font-size: 16px;
+    margin-left: 90%;
+}
+.container{
+    margin-left: 35%;
+}
+.check{
+    display: inline-block;
+    width: 100px;
+    margin-left: 65%;
+}
+.checkbox{
+    display: inline-block;
+    margin-left: 4%;
+}
+.heading{
+  font-size:30px;
+  margin-right: 75%;
+}
+.giftPage{
+    background-color:black;
+    color:white;
+}
+label {
+        display: inline-block;
+        width: 200px;
+      }
+input[type=number], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+div {
+ margin-bottom: 20px;
+    }
+
+</style>
+

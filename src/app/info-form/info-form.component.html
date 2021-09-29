@@ -1,40 +1,55 @@
 <div class="formPage">
-<p text align:left ><strong>Personal Information</strong></p>
+<p class="heading"><strong>Personal Information</strong></p>
 <form>
 <div class="formContainer">
 <label  for="firstName">FIRST NAME: </label>
 <input id="firstName" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="lastName">LAST NAME: </label>
 <input id="lastName" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="cma">CMA#: </label>
 <input id="cma" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="phone">PHONE: </label>
 <input id="phone" type="text" [formControl]="formFill">
+</div>
 
+<div class="formContainer">
 <label for="email">EMAIL ADRESS: </label>
 <input id="email" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="adress1">ADRESS 1: </label>
 <input id="adress1" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="adress2">ADRESS 2: </label>
 <input id="adress2" type="text" [formControl]="formFill">
+</div>
 
+<div class="formContainer">
 <label for="city">CITY: </label>
 <input id="city" type="text" [formControl]="formFill">
+</div>
 
+<div class="formContainer">
 <label for="state">STATE: </label>
 <input id="state" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="zip">ZIP/POSTAL CODE: </label>
 <input id="zip" type="text" [formControl]="formFill">
+</div>
 
+<div class="formContainer">
 <label for="country">COUNTRY: </label>
 <input id="country" type="text" [formControl]="formFill">
-
+</div>
+<div class="formContainer">
 <label for="urbanization">URBANIZATION*: </label>
 <input id="urbanization" type="text" [formControl]="formFill">
 
@@ -45,23 +60,26 @@
 <input  type="submit" value="Continue"></div>
 </form>
 </div>
+
 <style>
 .formPage{
     background-color:black;
     color:white;
 }
-.formContainer{ margin-left: 35%;
+.formContainer{ margin-left: 40%;
     
 }
 .formButtons {
     font-size: 16px;
     margin-left: 90%;
-  
-    
-
 }
+.heading{
+  font-size:30px;
+  margin-right: 75%;
+}
+
 input[type=text], select {
-  width: 100%;
+  width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   border: 1px solid #ccc;
@@ -70,8 +88,7 @@ input[type=text], select {
 }
 
 label {
-  display: inline-block;
-  width: 140px;
-  text-align: right;
-}​
+        display: inline-block;
+        width: 150px;
+      }
 </style>
