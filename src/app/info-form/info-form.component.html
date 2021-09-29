@@ -1,0 +1,77 @@
+<div class="formPage">
+<p text align:left ><strong>Personal Information</strong></p>
+<form>
+<div class="formContainer">
+<label  for="firstName">FIRST NAME: </label>
+<input id="firstName" type="text" [formControl]="formFill">
+
+<label for="lastName">LAST NAME: </label>
+<input id="lastName" type="text" [formControl]="formFill">
+
+<label for="cma">CMA#: </label>
+<input id="cma" type="text" [formControl]="formFill">
+
+<label for="phone">PHONE: </label>
+<input id="phone" type="text" [formControl]="formFill">
+
+<label for="email">EMAIL ADRESS: </label>
+<input id="email" type="text" [formControl]="formFill">
+
+<label for="adress1">ADRESS 1: </label>
+<input id="adress1" type="text" [formControl]="formFill">
+
+<label for="adress2">ADRESS 2: </label>
+<input id="adress2" type="text" [formControl]="formFill">
+
+<label for="city">CITY: </label>
+<input id="city" type="text" [formControl]="formFill">
+
+<label for="state">STATE: </label>
+<input id="state" type="text" [formControl]="formFill">
+
+<label for="zip">ZIP/POSTAL CODE: </label>
+<input id="zip" type="text" [formControl]="formFill">
+
+<label for="country">COUNTRY: </label>
+<input id="country" type="text" [formControl]="formFill">
+
+<label for="urbanization">URBANIZATION*: </label>
+<input id="urbanization" type="text" [formControl]="formFill">
+
+<p>*{{ "{if required for international adresses }" }}</p>
+</div>
+<div class="formButtons">
+<input type="reset" value="Clear">    
+<input  type="submit" value="Continue"></div>
+</form>
+</div>
+<style>
+.formPage{
+    background-color:black;
+    color:white;
+}
+.formContainer{ margin-left: 35%;
+    
+}
+.formButtons {
+    font-size: 16px;
+    margin-left: 90%;
+  
+    
+
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}​
+</style>
