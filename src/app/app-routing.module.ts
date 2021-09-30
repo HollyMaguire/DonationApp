@@ -9,8 +9,9 @@ import { UserManagmentComponent } from './user-managment/user-managment.componen
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
   {path: 'gift', component: GiftsComponent},
+  {path:'users', component: UserManagmentComponent},
   {path: '', component: DonationManagmentComponent},
-  {path:'users', component: UserManagmentComponent}
+  
 ];
 
 @NgModule({

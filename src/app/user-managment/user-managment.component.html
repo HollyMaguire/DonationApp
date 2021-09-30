@@ -11,16 +11,17 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="donationdata">
-        <td>{{userdata.firstName}}</td>
-        <td>{{userdata.lastName}}</td>
-        <td>{{userdata.email}}</td>
-        <td>{{userdata.role}}</td>
+        <tr *ngFor="let user of userdata; let i = index;">
+          
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role}}</td>
         
-        </tr> -->
+        </tr>
       </tbody>
     </table>
-    <router-outlet></router-outlet>
+    <router-outlet></router-outlet> 
 
 
   

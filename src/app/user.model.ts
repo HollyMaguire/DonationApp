@@ -1,8 +1,8 @@
-export interface User {
+export interface IUser {
         firstName:string;
         lastName:string;
         email:string;
-        role:boolean;
+        role:string;
         }
 
 

@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./info-form.component.css']
 })
 export class InfoFormComponent implements OnInit {
-  formFill = new FormControl('');
+  public formFill = new FormControl('');
   constructor() { }
 
   ngOnInit(): void {

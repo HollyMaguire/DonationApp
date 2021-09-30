@@ -14,13 +14,12 @@ export class UserManagmentComponent implements OnInit {
 
 
   ngOnInit(): void {
-        //    this.userService.getuserData().subscribe(
-    //      (data:any) => {this.userdata = data; console.log(data)},
-    //      (error:any) => this.errorMsg = error,
-    //      () => console.log("Completed")
-    // )
-    //    }
+        this.userService.getUserData().subscribe(
+         (data:any) => {this.userdata = data; console.log(data)},
+         (error:any) => this.errorMsg = error,
+         () => console.log("Completed"))
   }
-
-
 }
+
+
+

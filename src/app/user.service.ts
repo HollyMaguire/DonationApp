@@ -1,24 +1,25 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { User } from './user.model';
+import { IUser } from './user.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
- // private _url: string = "http://127.0.0.1:8000/Users/"
+ private _url: string = "http://127.0.0.1:8000/Users/"
 
-//   constructor(private http: HttpClient){ }
+  constructor(private http: HttpClient){ }
 
-  // getUserData(): Observable<User[]>{
-  //   return this.http.get<User[]>(this._url)
+  getUserData(): Observable<IUser[]>{
+    return this.http.get<IUser[]>(this._url)
   
-  //  }
-  //  errorHandler(error: HttpErrorResponse){
-  //    return throwError(error.message || "Server Error")
-//}
+   }
+   errorHandler(error: HttpErrorResponse){
+     return throwError(error.message || "Server Error")
+}
 }
 
 

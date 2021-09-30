@@ -7,15 +7,15 @@ import { IDonation } from './donation.model';
   providedIn: 'root'
 })
 export class DonationService {
-  // private _url: string = "http://127.0.0.1:8000/DonationsManagement/"
+  private _url: string = "http://127.0.0.1:8000/DonationsManagement/"
 
-//   constructor(private http: HttpClient){ }
+  constructor(private http: HttpClient){ }
 
-  // getDonationData(): Observable<IDonation[]>{
-  //   return this.http.get<IDonation[]>(this._url)
+  getDonationData(): Observable<IDonation[]>{
+    return this.http.get<IDonation[]>(this._url)
   
-  //  }
-  //  errorHandler(error: HttpErrorResponse){
-  //    return throwError(error.message || "Server Error")
-//}
+   }
+   errorHandler(error: HttpErrorResponse){
+     return throwError(error.message || "Server Error")
+}
 }

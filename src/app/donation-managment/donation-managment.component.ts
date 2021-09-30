@@ -12,11 +12,11 @@ export class DonationManagmentComponent implements OnInit {
     public errorMsg: any;
     constructor(private dataService: DonationService) { }
   
-    ngOnInit( ): void { }
-    //    this.dataService.getDonationData().subscribe(
-    //      (data:any) => {this.donationdata = data; console.log(data)},
-    //      (error:any) => this.errorMsg = error,
-    //      () => console.log("Completed")
-    // )
-    //    }
-      }
+    ngOnInit( ): void { 
+       this.dataService.getDonationData().subscribe(
+         (data:any) => {this.donationdata = data; console.log(data)},
+         (error:any) => this.errorMsg = error,
+         () => console.log("Completed"))
+       }
+
+}

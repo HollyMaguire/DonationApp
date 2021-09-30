@@ -9,16 +9,14 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="donationdata">
-          <td>{{donationdata.name}}</td>
-          <td>{{donationdata.date}}</td>
-          <td>{{donationdata.amount}}</td>
-          <td>{{donationdata.donationType}}</td>
+        <tr *ngFor="let donation of donationdata; let i = index;">
+          
+          <td>{{donation.userName}}</td>
+          <td>{{donation.date}}</td>
+          <td>{{donation.amount}}</td>
+          <td>{{donation.donationType}}</td>
         
-        </tr> -->
       </tbody>
     </table>
     <router-outlet></router-outlet>
 
-
-  
