@@ -8,7 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
   {path: 'gift', component: GiftsComponent},
-  {path: 'manage', component: DonationManagmentComponent},
+  {path: '', component: DonationManagmentComponent},
   {path:'nav', component: NavBarComponent}//this is for testing navbar and will be removed later
 ];
 

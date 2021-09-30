@@ -7,7 +7,7 @@ import { IDonation } from './donation.model';
   providedIn: 'root'
 })
 export class DonationService {
-//  private _url: string = "ourAPI"
+  // private _url: string = "http://127.0.0.1:8000/DonationsManagement/"
 
 //   constructor(private http: HttpClient){ }
 

@@ -1,1 +1,30 @@
+<nav class="sidebar">
+    <div class="container">
+        <a class="navbar-brand"></a>
+        <ul class="nav" routerLinkActive="active">
+            <li><a class="nav-link" routerLink="/gift">Give</a></li>
+            <li><a class="nav-link" routerLink="/">Donation Managment</a></li>
+            <li><a class="nav-link" routerLink="/infoForm">Forms</a></li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<style>
+
+.nav {
+  background-color:black; 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 15px;
+  padding: 10px;
+}
+</style>
 <router-outlet></router-outlet> 
