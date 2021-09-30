@@ -11,6 +11,7 @@ import { UserManagmentComponent } from './user-managment/user-managment.componen
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { UserService } from './user.service';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { UserService } from './user.service';
     DonationManagmentComponent,
     NavBarComponent,
     UserManagmentComponent,
+    LoginComponent,
     
   ],
   imports: [
