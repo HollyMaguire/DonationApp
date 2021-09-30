@@ -7,6 +7,7 @@ import { InfoFormComponent } from './info-form/info-form.component';
 import { GiftsComponent } from './gifts/gifts.component';
 import { DonationManagmentComponent } from './donation-managment/donation-managment.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { UserManagmentComponent } from './user-managment/user-managment.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     InfoFormComponent,
     GiftsComponent,
     DonationManagmentComponent,
-    NavBarComponent
+    NavBarComponent,
+    UserManagmentComponent
   ],
   imports: [
     BrowserModule,
