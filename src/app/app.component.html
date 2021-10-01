@@ -1,33 +1,34 @@
-<nav class="sidebar">
-    <div class="container">
-        <a class="navbar-brand"></a>
-        <ul class="nav" routerLinkActive="active">
-            <li><a class="nav-link" routerLink="/gift">Give</a></li>
-            <li><a class="nav-link" routerLink="/">Donation Managment</a></li>
-            <li><a class="nav-link" routerLink="/infoForm">Forms</a></li>
-            <li><a class="nav-link" routerLink="/users">User Managment</a></li>
-        </ul>
-    </div>
-</nav>
 
 
+<mat-toolbat>
 
+      <mat-sidenav-container> 
+            <mat-sidenav>
+                  <div class="container">
+                      <ul class="nav" routerLinkActive="active">
+                          <li><a class="nav-link" routerLink="/users">User Managment</a></li>
+                          <li><a class="nav-link" routerLink="/">Donation Managment</a></li>
+                          <li><a class="nav-link" routerLink="/infoForm">Forms</a></li>
+                          <li><a class="nav-link" routerLink="/gift">Give</a></li>
+                          
+                      </ul>
+                  </div>
+            </mat-sidenav>
+      </mat-sidenav-container> 
+</mat-toolbat>
+
+<router-outlet></router-outlet>
 <style>
 
 .nav {
-  background-color:black; 
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
+  background-color:gray; 
+  margin: 50;
+  padding: 500;
 }
 
-.nav li {
-  display: inline-block;
-  font-size: 15px;
-  padding: 10px;
-}
 </style>
 
 
-<router-outlet></router-outlet>
+
+
+            
