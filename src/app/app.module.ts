@@ -11,6 +11,7 @@ import { UserManagmentComponent } from './user-managment/user-managment.componen
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { UserService } from './user.service';
+import { LoginComponent } from './login/login.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
@@ -30,6 +31,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     DonationManagmentComponent,
     NavBarComponent,
     UserManagmentComponent,
+    LoginComponent,
     
   ],
   imports: [
