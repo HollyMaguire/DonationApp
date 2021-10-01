@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthguardService } from './auth.service';
 
 
 @Component({
@@ -8,4 +10,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'NgoDonations';
+
+  constructor (private authService:AuthguardService, 
+    private router:Router) {
+  }
+
+  logout() {
+    this.authService.logoutUser();
+    this.router.navigate(['login']);
+  }
+
+  
 }
