@@ -14,7 +14,7 @@ import { RedirectComponent } from './redirect/redirect.component';
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
   {path: 'gift', component: GiftsComponent},
-  {path:'users', component: UserManagmentComponent, },
+  {path:'users', component: UserManagmentComponent, canActivate:[UserGuard]},
   {path: '', component: DonationManagmentComponent, canActivate:[UserGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'edit', component: EditformComponent},
