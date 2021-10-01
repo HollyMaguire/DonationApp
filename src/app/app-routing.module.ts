@@ -8,13 +8,17 @@ import { UserManagmentComponent } from './user-managment/user-managment.componen
 import { AuthguardService } from './auth.service';
 import { LoginComponent } from './login/login.component';
 import { UserGuard } from './user.guard';
+import { EditformComponent } from './editform/editform.component';
+import { RedirectComponent } from './redirect/redirect.component';
 
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
   {path: 'gift', component: GiftsComponent},
-  {path:'users', component: UserManagmentComponent, canActivate:[UserGuard]},
+  {path:'users', component: UserManagmentComponent, },
   {path: '', component: DonationManagmentComponent, canActivate:[UserGuard]},
   {path: 'login', component: LoginComponent},
+  {path: 'edit', component: EditformComponent},
+  {path: 'thanks', component: RedirectComponent },
   
 ];
 

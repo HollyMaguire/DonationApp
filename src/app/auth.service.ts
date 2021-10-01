@@ -6,6 +6,14 @@ import { of } from 'rxjs';
 })
 export class AuthguardService {
 
+  // private isloggedIn: boolean;
+  // private userName:string | undefined;
+  // private role:boolean | undefined;
+ 
+  // constructor() {
+  //   this.isloggedIn=false;
+
+
     private isloggedIn: boolean;
     private role:string | undefined;
     private userName:string | undefined;

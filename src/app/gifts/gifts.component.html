@@ -20,11 +20,26 @@
     </div>
     <div class="formButtons">
         <input type="reset" value="Clear">    
-        <input  type="submit" value="Continue"></div>
+        <ul class="nav" routerLinkActive="active">
+            <li><btn class="nav-link" routerLink="/thanks">Submit</btn></li></ul>
+            <!-- <input  type="submit" value="Continue"> -->
+    </div> 
 </form>
 </div>
 
 <style>
+.btn {
+  background-color: lightgray;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 .formButtons {
     font-size: 16px;
     margin-left: 90%;
@@ -43,7 +58,8 @@
 }
 .heading{
   font-size:30px;
-  margin-right: 75%;
+  /* margin-right: 75%; */
+  text-align: center;
 }
 .giftPage{
     background: rgb(195,201,213);

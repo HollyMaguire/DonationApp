@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { UserService } from './user.service';
 import { LoginComponent } from './login/login.component';
+import { EditformComponent } from './editform/editform.component';
 
 
 import {MatSidenavModule } from '@angular/material/sidenav';
@@ -23,6 +24,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AuthguardService } from './auth.service';
+import { RedirectComponent } from './redirect/redirect.component';
 
 
 
@@ -35,6 +37,8 @@ import { AuthguardService } from './auth.service';
     NavBarComponent,
     UserManagmentComponent,
     LoginComponent,
+    EditformComponent,
+    RedirectComponent,
     
   ],
   imports: [
