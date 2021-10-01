@@ -19,30 +19,28 @@
     <input type="number" [formControl]="giftFill" id="memorial" /> <div class="checkbox"><input type="checkbox"> </div>
     </div>
     <div class="formButtons">
-        <input type="reset" value="Clear">    
-        <ul class="nav" routerLinkActive="active">
-            <li><btn class="nav-link" routerLink="/thanks">Submit</btn></li></ul>
+        <input class="nav-link" type="reset" value="Clear"> 
+        <!-- <div class="nav" routerLinkActive="active"> -->
+            <button class="nav-link"  routerLinkActive="active" routerLink="/thanks">Submit</button></div>
             <!-- <input  type="submit" value="Continue"> -->
-    </div> 
+       
+        
 </form>
 </div>
 
 <style>
-.btn {
-  background-color: lightgray;
-  border: none;
-  color: white;
-  padding: 20px;
+
+.nav-link {
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  /* margin: 4px 2px; */
   cursor: pointer;
 }
 .formButtons {
     font-size: 16px;
-    margin-left: 90%;
+    margin-left: 55%;
 }
 .container{
     margin-left: 35%;

@@ -15,6 +15,7 @@ export class UserService {
 
   getUserData(): Observable<IUser[]>{
     return this.http.get<IUser[]>(this._url)
+    
   
    }
    errorHandler(error: HttpErrorResponse){

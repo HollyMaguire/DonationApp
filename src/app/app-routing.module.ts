@@ -17,6 +17,7 @@ const routes: Routes = [
   {path:'users', component: UserManagmentComponent, canActivate:[UserGuard]},
   {path: '', component: DonationManagmentComponent, canActivate:[UserGuard]},
   {path: 'login', component: LoginComponent},
+  {path: 'edit/:user_id', component: EditformComponent},
   {path: 'edit', component: EditformComponent},
   {path: 'thanks', component: RedirectComponent },
   

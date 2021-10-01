@@ -8,6 +8,7 @@ import { FormControl } from '@angular/forms';
 })
 export class GiftsComponent implements OnInit {
   giftFill = new FormControl('');
+  
 
   constructor() { }
 

@@ -11,7 +11,9 @@ export class UserManagmentComponent implements OnInit {
     public errorMsg: any;
     constructor(private userService: UserService) { }
   
-
+  onEdit(): void {
+    console.log("i was clicked")
+  }
 
   ngOnInit(): void {
         this.userService.getUserData().subscribe(
