@@ -7,15 +7,17 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { UserManagmentComponent } from './user-managment/user-managment.component';
 import { AuthguardService } from './auth.service';
 import { LoginComponent } from './login/login.component';
+import { UserGuard } from './user.guard';
 
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
   {path: 'gift', component: GiftsComponent},
-  {path:'users', component: UserManagmentComponent, canActivate:[AuthguardService]},
-  {path: '', component: DonationManagmentComponent, canActivate:[AuthguardService]},
+  {path:'users', component: UserManagmentComponent, canActivate:[UserGuard]},
+  {path: '', component: DonationManagmentComponent, canActivate:[UserGuard]},
   {path: 'login', component: LoginComponent},
   
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

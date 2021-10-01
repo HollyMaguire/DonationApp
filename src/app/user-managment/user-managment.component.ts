@@ -19,6 +19,7 @@ export class UserManagmentComponent implements OnInit {
          (error:any) => this.errorMsg = error,
          () => console.log("Completed"))
   }
+  
 }
 
 

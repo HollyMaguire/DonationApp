@@ -5,34 +5,40 @@ import { of } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthguardService {
-  private isloggedIn: boolean;
-  private userName:string | undefined;
- 
-  constructor() {
-    this.isloggedIn=false;
-}
 
-login(username: string, password:string) {
-    //Assuming users are provided the correct credentials.
-    //In real app you will query the database to verify.
-    this.isloggedIn=true;
-    this.userName=username;
-    return of(this.isloggedIn);
-}
+    private isloggedIn: boolean;
+    private role:string | undefined;
+    private userName:string | undefined;
+    
+    constructor() {
+      this.isloggedIn=false;
+    }
 
-isUserLoggedIn(): boolean {
-    return this.isloggedIn;
-}
+    login(username: string, password:string) {
+        this.isloggedIn=true;
+        this.userName=username;
+        return of(this.isloggedIn);
+    }
 
-isAdminUser():boolean {
-  // if (this.role=='Admin') {
-  //     return true; 
-  
-  return false;
-}
+    isUserLoggedIn(): boolean {
+        return this.isloggedIn;
+    }
+    
 
-logoutUser(): void{
-  this.isloggedIn = false;
-}
+
+
+                    isAdminUser():boolean {
+                      if (this.role=='admin') {
+                          return true; 
+                      }
+                      return false;
+                    }
+
+
+
+
+    logoutUser(): void{
+      this.isloggedIn = false;
+    }
 
 }

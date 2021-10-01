@@ -13,7 +13,8 @@ import { RouterModule } from '@angular/router';
 import { UserService } from './user.service';
 import { LoginComponent } from './login/login.component';
 
-import { MatSidenavModule } from '@angular/material/sidenav';
+
+import {MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
@@ -21,10 +22,12 @@ import {MatTableModule} from '@angular/material/table';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AuthguardService } from './auth.service';
+
 
 
 @NgModule({
-  declarations: [
+  declarations: [ 
     AppComponent,
     InfoFormComponent,
     GiftsComponent,
@@ -35,6 +38,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
@@ -50,10 +54,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatTableModule,
     MatToolbarModule,
     MatButtonModule,
-
+    
   ],
   
-  providers: [UserService],
+  providers: [UserService, AuthguardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,14 +12,15 @@ export class LoginComponent implements OnInit {
   invalidCredentialMsg: string | undefined;
   username:string | undefined;
   password:string | undefined;
-  retUrl:string | null="home";
+  retUrl:string | null="users";
 
   constructor(private authService: AuthguardService, 
     private router: Router, 
     private activatedRoute:ActivatedRoute) {
   }
   ngOnInit() {
-  }
+    
+  } 
 
   onFormSubmit(loginForm: any) {
     this.authService.login(loginForm.value.username, loginForm.value.password).subscribe(data => {
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
     if (this.retUrl!=null) {
         this.router.navigate( [this.retUrl]);
     } else {
-        this.router.navigate( ['home']);
+        this.router.navigate( ['login']);
     }
     });
   }
