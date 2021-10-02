@@ -1,26 +1,32 @@
 <div class="EditPage">
-<p class="heading"><strong>Edit User Information</strong></p>
+<p class="heading"><strong>User Information</strong></p>
 <form>
-<div class="formContainer">
-<label  for="{user.firstName">Edit First Name: {{user_id}}</label>
-<input id="{user.firstName" type="text" [formControl]="formFill">
-</div>
-<div class="formContainer">
-<label for="user.lastName">Edit Last Name: </label>
-<input id="user.lastName" type="text" [formControl]="formFill">
-</div>
-<div class="formContainer">
-<label for="user.email">Edit Email: </label>
-<input id="user.email" type="text" [formControl]="formFill">
-</div>
-<div class="formContainer">
-<label for="user.role">Edit Role: </label>
-<input id="user.role" type="text" [formControl]="formFill">
-</div>
-<div class="formButtons">
-    <input type="reset" value="Clear">    
-    <input  type="submit" value="Update"></div>
-<!-- submit button will need to be connected to the put request from backend  -->
+
+    <div class="formContainer">
+        <label> First Name: </label>
+        <input type="text" [formControl]="formFill" >
+    </div>
+
+    <div class="formContainer">
+        <label>Last Name: </label>
+        <input type="text" [formControl]="formFill">
+    </div>
+
+    <div class="formContainer">
+        <label>Email: </label>
+        <input type="text" [formControl]="formFill">
+    </div>
+
+    <div class="formContainer">
+        <label>Role: </label>
+        <input type="text" [formControl]="formFill">
+    </div>
+
+    <div class="formButtons">
+        <input type="reset" value="Clear">    
+        <input  type="submit" value="Update">
+    </div>
+
 </form>
 </div>
 

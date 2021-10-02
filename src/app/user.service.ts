@@ -20,7 +20,14 @@ export class UserService {
 
    errorHandler(error: HttpErrorResponse){
      return throwError(error.message || "Server Error")
-}
+  }
+
+
+  getUser(id: any): Observable<IUser[]>{
+    return this.http.get<IUser[]>("http://127.0.0.1:8000/user_details/" + id + "/")
+   }
+
+
 }
 
 

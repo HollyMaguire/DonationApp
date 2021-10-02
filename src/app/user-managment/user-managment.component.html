@@ -13,12 +13,13 @@
       <tbody>
         <tr *ngFor="let user of userdata; let i = index;">
           
-          <td>{{user.first_name}}</td>
+          <td>({{user.first_name}}</td>
           <td>{{user.last_name}}</td>
           <td>{{user.email}}</td>
           <td>{{user.role}}</td>
           
-          <td><a (click)="onEdit()"class="nav" [routerLink]="['/edit']">Edit</a></td>
+          <td><a class="nav" [routerLink]="['/edit/'] + user.id">Edit</a></td>
+
         </tr>
       </tbody>
     </table>
@@ -26,4 +27,4 @@
     <router-outlet></router-outlet> 
 
 
-  
+  <!-- click) = "user_clicked(user.id)">  -->
