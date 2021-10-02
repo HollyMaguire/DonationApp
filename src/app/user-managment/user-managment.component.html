@@ -6,18 +6,19 @@
           <th>Last Name</th>
           <th>Email</th>
           <th>Role</th>
-          <th><ul class="nav" routerLinkActive="active"></ul><li><a class="nav-link" routerLink="/edit">Edit</a></li></th>
+          <th>Edit</th>
           <th>delete</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let user of userdata; let i = index;">
           
-          <td>{{user.firstName}}</td>
-          <td>{{user.lastName}}</td>
+          <td>{{user.first_name}}</td>
+          <td>{{user.last_name}}</td>
           <td>{{user.email}}</td>
           <td>{{user.role}}</td>
-          <td><ul class="nav" routerLinkActive="active"></ul><li><a (click)="onEdit()"class="nav-link" [routerLink]="['/edit']">Edit</a></li></td>
+          
+          <td><a (click)="onEdit()"class="nav" [routerLink]="['/edit']">Edit</a></td>
         </tr>
       </tbody>
     </table>

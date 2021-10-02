@@ -6,8 +6,8 @@ import { AuthguardService } from './auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class UserGuard implements CanActivate, CanActivateChild {
-
+export class UserGuard implements CanActivate {
+  // , CanActivateChild
   constructor(private router:Router, private authService: AuthguardService ) {}
 
   canActivate(
@@ -21,13 +21,13 @@ export class UserGuard implements CanActivate, CanActivateChild {
       return true;
     }
    
-    canActivateChild(route: ActivatedRouteSnapshot,
-      state: RouterStateSnapshot): boolean | UrlTree {
-        if (!this.authService.isAdminUser()) {
-          alert('You are not allowed to view this page');
-          return false;
-        }
-        return true;
-    }
+    // canActivateChild(route: ActivatedRouteSnapshot,
+    //   state: RouterStateSnapshot): boolean | UrlTree {
+    //     if (!this.authService.isAdminUser()) {
+    //       alert('You are not allowed to view this page');
+    //       return false;
+    //     }
+    //     return true;
+    // }
 
   }

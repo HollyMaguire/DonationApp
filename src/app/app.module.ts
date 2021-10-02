@@ -58,6 +58,7 @@ import { RedirectComponent } from './redirect/redirect.component';
     MatTableModule,
     MatToolbarModule,
     MatButtonModule,
+    RouterModule 
     
   ],
   

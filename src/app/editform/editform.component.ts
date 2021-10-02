@@ -9,10 +9,12 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ['./editform.component.css']
 })
 export class EditformComponent implements OnInit {
+  
   public formFill = new FormControl('');
   public userdata: any;
   public errorMsg: any;
   user_id: String | null;
+
   constructor(private userService: UserService, private route: ActivatedRoute) {
     this.user_id = this.route.snapshot.paramMap.get("user_id")
    }

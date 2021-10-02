@@ -1,14 +1,20 @@
 <div class="login">
-<h3>Login</h3>
- 
+  <h3>Login</h3>
+    <p><input [(ngModel)] = "input.username" placeholder = "Username" ></p>
+    <p><input [(ngModel)] = "input.password" type = "password" placeholder = "Password"></p>
+    <p><button (click) = "loginUser()" type="submit">Login</button></p>
+    
 <div>
- <form #loginForm="ngForm" (ngSubmit)="onFormSubmit(loginForm)">
-   <p>User Name: <input type='text'  name='username' ngModel></p>
-   <p>Password: <input type="password"  name="password" ngModel></p>
-   <p><button type="submit">Submit</button></p> 
- </form>
-</div> 
+  <p><input [(ngModel)] = "register.username" placeholder = "Username" ></p>
+  <p><input [(ngModel)] = "register.first_name" placeholder = "First Name" ></p>
+  <p><input [(ngModel)] = "register.last_name" placeholder = "Last Name" ></p>
+  <p><input [(ngModel)] = "register.email" placeholder = "Email" ></p>
+  <p><input [(ngModel)] = "register.password" type = "password" placeholder = "Password"></p>
+  <p><input [(ngModel)] = "register.role" placeholder = "Role:admin/user"></p>
+  <p><button (click) = "registerUser()" type="submit">Register</button></p>
 </div>
+
+
 <style>
 
 .login{

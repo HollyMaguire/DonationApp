@@ -6,14 +6,6 @@ import { of } from 'rxjs';
 })
 export class AuthguardService {
 
-  // private isloggedIn: boolean;
-  // private userName:string | undefined;
-  // private role:boolean | undefined;
- 
-  // constructor() {
-  //   this.isloggedIn=false;
-
-
     private isloggedIn: boolean;
     private role:string | undefined;
     private userName:string | undefined;
@@ -22,9 +14,8 @@ export class AuthguardService {
       this.isloggedIn=false;
     }
 
-    login(username: string, password:string) {
+    login() {
         this.isloggedIn=true;
-        this.userName=username;
         return of(this.isloggedIn);
     }
 
@@ -33,19 +24,16 @@ export class AuthguardService {
     }
     
 
-
-
-                    isAdminUser():boolean {
-                      if (this.role=='admin') {
-                          return true; 
-                      }
-                      return false;
-                    }
-
-
+    // isAdminUser():boolean {
+    //   if (this.role=='admin') {
+    //       return true; 
+    //   }
+    //   return false;
+    // }
 
 
     logoutUser(): void{
+      alert('You are logged out.');
       this.isloggedIn = false;
     }
 
