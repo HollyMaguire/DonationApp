@@ -2,22 +2,30 @@
 <p class="heading"><strong>Gifts</strong></p>
 <form>
     <div class="check">CHECK FOR MONTHLY RECURRING GIFT</div>
-    <div class="container">
-    <label for="GeneralDonation">GENERAL DONATION FUND</label>
-    <input type="number" [formControl]="giftFill" id="GeneralDonation" /> <div class="checkbox"><input type="checkbox"> </div>
+        <div class="container">
+            <label for="GeneralDonation">GENERAL DONATION FUND</label>
+            <input type="number" [formControl]="giftFill" id="GeneralDonation" /> 
+        <div class="checkbox"><input type="checkbox"> </div>
     </div>
+
     <div class="container">
-    <label for="runForSon">RUN FOR THE SON 2017</label>
-    <input type="number" [formControl]="giftFill" id="runForSon" /> <div class="checkbox"><input type="checkbox"> </div>
+        <label for="runForSon">RUN FOR THE SON 2017</label>
+        <input type="number" [formControl]="giftFill" id="runForSon" /> 
+    <div class="checkbox"><input type="checkbox"> </div>
     </div>
+
     <div class="container">
-    <label for="missionTrip">MISSION TRIP SPONSORSHIP</label>
-    <input type="number" [formControl]="giftFill" id="missionTrip" /><div class="checkbox"><input type="checkbox"> </div>
+        <label for="missionTrip">MISSION TRIP SPONSORSHIP</label>
+        <input type="number" [formControl]="giftFill" id="missionTrip" />
+    <div class="checkbox"><input type="checkbox"> </div>
     </div>
+
     <div class="container">
-    <label for="memorial">MEMORIAL GIFT</label>
-    <input type="number" [formControl]="giftFill" id="memorial" /> <div class="checkbox"><input type="checkbox"> </div>
+        <label for="memorial">MEMORIAL GIFT</label>
+        <input type="number" [formControl]="giftFill" id="memorial" /> 
+    <div class="checkbox"><input type="checkbox"> </div>
     </div>
+
     <div class="formButtons">
         <input class="nav-link" type="reset" value="Clear"> 
         <!-- <div class="nav" routerLinkActive="active"> -->
@@ -31,33 +39,21 @@
 <style>
 
 .nav-link {
-  text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  /* margin: 4px 2px; */
   cursor: pointer;
 }
 .formButtons {
     font-size: 16px;
-    margin-left: 55%;
 }
-.container{
-    margin-left: 35%;
-}
-.check{
-    display: inline-block;
-    width: 100px;
-    margin-left: 65%;
-}
+
 .checkbox{
     display: inline-block;
     margin-left: 4%;
 }
 .heading{
   font-size:30px;
-  /* margin-right: 75%; */
-  text-align: center;
 }
 .giftPage{
     background: rgb(195,201,213);
@@ -70,7 +66,6 @@ label {
       }
 input[type=number], select {
   padding: 12px 20px;
-  margin: 8px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;

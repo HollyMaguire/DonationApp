@@ -2,33 +2,23 @@
 
 
 
-    <nav class="bar">
-        <div class="container">
-            <a class="navbar-brand"></a>
-            <ul class="nav" routerLinkActive="active">
-                <li><a class="nav-link" routerLink="/gift">Give</a></li>
-                <li><a class="nav-link" routerLink="/">Donation Managment</a></li>
-                <li><a class="nav-link" routerLink="/infoForm">Forms</a></li>
-                <li><a class="nav-link" routerLink="/users">User Managment</a></li>
-                <li><a class="nav-link" routerLink="/login">Login</a></li>
-                <li><a class="nav-link" (click)="logout()">Log out</a></li>
-            </ul>
-        </div>
-    </nav>
+
+  <div class="container">
+      <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+          <a class="nav-link" routerLink="/gift">Give</a>
+          <a class="nav-link" routerLink="/">Donation Managment</a>
+          <a class="nav-link" routerLink="/infoForm">Forms</a>
+          <a class="nav-link" routerLink="/users">User Managment</a>
+          <a class="nav-link" routerLink="/login">Login</a>
+          <a class="nav-link" (click)="logout()">Log out</a>
+      </nav>
+  </div>
+
 
 
 
 <style>
-.bar{
-  width: 100%;
-}
-.nav {
-  background-color:black; 
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+
 
 
 
