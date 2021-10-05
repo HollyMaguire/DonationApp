@@ -25,6 +25,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AuthguardService } from './auth.service';
 import { RedirectComponent } from './redirect/redirect.component';
+import { MakeDonationComponent } from './make-donation/make-donation.component';
 
 
 
@@ -39,6 +40,7 @@ import { RedirectComponent } from './redirect/redirect.component';
     LoginComponent,
     EditformComponent,
     RedirectComponent,
+    MakeDonationComponent,
     
   ],
   imports: [

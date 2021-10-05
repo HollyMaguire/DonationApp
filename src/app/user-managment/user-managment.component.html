@@ -1,11 +1,12 @@
-<h1>User Managment</h1>
+
+  <h1>User Managment</h1>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary float-right m-2" data-bs-toggle="modal" data-bs-target="#exampleModal" 
+<button data-bs-toggle="modal" data-bs-target="#exampleModal" 
 (click)="addClick()" data-keyboard="false">Add User</button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div *ngIf="ActivateEdit" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
 
@@ -15,13 +16,12 @@
       </div>
 
       <div class="modal-body">
-        <app-editform [dep]="dep" *ngIf="ActivateEdit"></app-editform> <!-- Here is data transfering to another form -->
+        <app-editform [dep]="dep"></app-editform> <!-- Here is data transfering to another form -->
       </div>
       
     </div>
   </div>
 </div>
-
 
 
 

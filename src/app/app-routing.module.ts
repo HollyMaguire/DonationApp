@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { UserGuard } from './user.guard';
 import { EditformComponent } from './editform/editform.component';
 import { RedirectComponent } from './redirect/redirect.component';
+import { MakeDonationComponent } from './make-donation/make-donation.component';
 
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'edit/:user_id', component: EditformComponent, canActivate:[UserGuard]},
   {path: 'edit', component: EditformComponent, canActivate:[UserGuard]},
   {path: 'thanks', component: RedirectComponent },
+  {path: 'donate', component: MakeDonationComponent}
   
 ];
 

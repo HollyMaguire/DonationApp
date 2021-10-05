@@ -23,7 +23,7 @@
 <input id="email" type="text" [formControl]="formFill">
 </div>
 <div class="formContainer">
-<label for="adress1">ADRESS 1: </label>
+<label for="adress1">ADdRESS 1: </label>
 <input id="adress1" type="text" [formControl]="formFill">
 </div>
 <div class="formContainer">
@@ -57,7 +57,10 @@
 </div>
 <div class="formButtons">
 <input type="reset" value="Clear">    
-<input  type="submit" value="Continue"></div>
+<div class="btns">
+<button class="nav-link"  routerLinkActive="active" routerLink="/gift">continue</button>
+</div>
+</div>
 </form>
 </div>
 
@@ -71,7 +74,14 @@ background: linear-gradient(90deg, rgba(195,201,213,1) 17%, rgba(133,161,215,1) 
 }
 
 .formButtons {
-    font-size: 16px;
+    font-size: 23px;
+    text-align:center;
+    display: inline-block;
+}
+.btns{
+  font-size: 16px;
+  text-align:center;
+  display: inline-block;
 }
 .heading{
   font-size:30px;
@@ -91,4 +101,5 @@ label {
         display: inline-block;
         width: 150px;
       }
+
 </style>

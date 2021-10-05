@@ -1,30 +1,19 @@
 <div class= giftPage>
 <p class="heading"><strong>Gifts</strong></p>
-<form>
-    <div class="check">CHECK FOR MONTHLY RECURRING GIFT</div>
-        <div class="container">
-            <label for="GeneralDonation">GENERAL DONATION FUND</label>
+<form >
+    <div class="check">Check for monthly recurring gift</div>
+        <div *ngFor="let donation of makeDonationData" class="container">
+            <label for="GeneralDonation">{{donation.donationName}}</label>
             <input type="number" [formControl]="giftFill" id="GeneralDonation" /> 
         <div class="checkbox"><input type="checkbox"> </div>
     </div>
 
-    <div class="container">
-        <label for="runForSon">RUN FOR THE SON 2017</label>
-        <input type="number" [formControl]="giftFill" id="runForSon" /> 
-    <div class="checkbox"><input type="checkbox"> </div>
-    </div>
-
-    <div class="container">
-        <label for="missionTrip">MISSION TRIP SPONSORSHIP</label>
-        <input type="number" [formControl]="giftFill" id="missionTrip" />
-    <div class="checkbox"><input type="checkbox"> </div>
-    </div>
-
-    <div class="container">
+   
+   <!-- <div class="container">
         <label for="memorial">MEMORIAL GIFT</label>
         <input type="number" [formControl]="giftFill" id="memorial" /> 
     <div class="checkbox"><input type="checkbox"> </div>
-    </div>
+    </div> -->
 
     <div class="formButtons">
         <input class="nav-link" type="reset" value="Clear"> 
@@ -37,7 +26,10 @@
 </div>
 
 <style>
-
+.check{margin-left: 60%;
+    width: 100px;
+    display: inline-block;
+}
 .nav-link {
   text-decoration: none;
   display: inline-block;
