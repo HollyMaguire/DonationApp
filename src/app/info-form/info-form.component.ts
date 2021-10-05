@@ -8,7 +8,6 @@ import { UserService } from '../user.service';
   selector: 'app-info-form',
   templateUrl: './info-form.component.html',
   styleUrls: ['./info-form.component.css'],
-  providers: [DonationService, ShareddataService],
 })
 export class InfoFormComponent implements OnInit {
 
@@ -23,13 +22,14 @@ export class InfoFormComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    this.donations = this.sharingService.getData();
+    console.log(this.donations);
+    console.log("#################")
   
   }
 
   ngAfterViewInit(){
-    this.donations = this.sharingService.getData();
-    console.log(this.sharingService.getData());
+
   }
 
   AddDonation(){

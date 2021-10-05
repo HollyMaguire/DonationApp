@@ -7,11 +7,12 @@
 
     <div *ngFor="let donation of makeDonationData">
         <div class="button-box col-lg-12">
-        <button class="nav-link"  routerLinkActive="active" routerLink="/infoForm">
+        <button (click)="getDonationClick(donation.id)" class="nav-link"  routerLinkActive="active" routerLink="/infoForm">
             {{donation.donationName}}
         </button>
         </div>
     </div>
+
 
 
 </div>

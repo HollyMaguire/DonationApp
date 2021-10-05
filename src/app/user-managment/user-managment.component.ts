@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ShareddataService } from '../shareddata.service';
 import { UserService } from '../user.service';
 
 
 @Component({
   selector: 'app-user-managment',
   templateUrl: './user-managment.component.html',
-  styleUrls: ['./user-managment.component.css'],
-  providers: [UserService],
+  styleUrls: ['./user-managment.component.css']
 })
+
 export class UserManagmentComponent implements OnInit {
     public userdata: any;
     public errorMsg: any;
@@ -17,7 +18,10 @@ export class UserManagmentComponent implements OnInit {
     ActivateEdit: boolean = false;
     dep: any;
 
-    constructor(private userService: UserService) { }
+    donations:any;
+
+    constructor(private userService: UserService,
+                private sharingService: ShareddataService) { }
 
 
   addClick(){
@@ -69,6 +73,7 @@ export class UserManagmentComponent implements OnInit {
          (data:any) => {this.userdata = data; console.log(data)},
          (error:any) => this.errorMsg = error,
          () => console.log("Completed"))
+     
   } 
 
   user_clicked = (id: any) => {

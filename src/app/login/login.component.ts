@@ -8,7 +8,6 @@ import { ShareddataService } from '../shareddata.service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [RegisterUserService, ShareddataService]
 })
 export class LoginComponent implements OnInit {
 
@@ -29,7 +28,6 @@ export class LoginComponent implements OnInit {
               private sharingService: ShareddataService) {}
 
   ngOnInit() {
-    this.sharingService.setData(this.input);
     this.register = {
       username: '',
       first_name: '',
@@ -58,9 +56,9 @@ export class LoginComponent implements OnInit {
 
   loginUser(){
 
-    console.log("THIS IS DATA")
-    this.sharingService.setData("hello")
-    
+    this.sharingService.setData(this.input.username)
+    console.log(this.sharingService.getData());
+    console.log("#################")
 
 
     this.registerUserService.loginUser(this.input).subscribe(
