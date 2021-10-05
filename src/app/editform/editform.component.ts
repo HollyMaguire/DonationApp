@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from "@angular/router";
+import { Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-editform',
@@ -10,11 +12,13 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class EditformComponent implements OnInit {
   
+  exform!: FormGroup;
+
   public formFill = new FormControl('');
   public userdata: any;
   public errorMsg: any;
 
-  constructor(private userService: UserService) {   }
+  constructor(private userService: UserService) { }
 
   @Input() dep:any;
   public id:string | undefined;
@@ -34,6 +38,14 @@ export class EditformComponent implements OnInit {
     this.password = this.dep.password;
     this.role = this.dep.role;
    
+    this.exform = new FormGroup({
+      'validation_username' : new FormControl(null, Validators.required),
+      'validation_name' : new FormControl(null, Validators.required),
+      'validation_last' : new FormControl(null, Validators.required),
+      'validation_email' : new FormControl(null, [Validators.required, Validators.email]),
+      'validation_password' : new FormControl(null, [Validators.required, Validators.minLength(10)]),
+      'validation_role' : new FormControl('admin', Validators.required),
+    });
   }
 
   AddUser(){
@@ -50,8 +62,13 @@ export class EditformComponent implements OnInit {
       data => {
         alert(data.toString());
     });
-
   }
+
+  // get first_name(){
+  //   return null
+  // }
+
+
 
   UpdateUser(){
     var val = {id: this.id,

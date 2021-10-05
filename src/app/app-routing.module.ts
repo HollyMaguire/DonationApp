@@ -15,14 +15,13 @@ import { MakeDonationComponent } from './make-donation/make-donation.component';
 const routes: Routes = [
   {path: 'infoForm', component: InfoFormComponent},
   {path: 'gift', component: GiftsComponent},
-  {path:'users', component: UserManagmentComponent, canActivate:[UserGuard]},
-  {path: '', component: DonationManagmentComponent, canActivate:[UserGuard]},
+  {path:'users', component: UserManagmentComponent},
+  {path: '', component: DonationManagmentComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'edit/:user_id', component: EditformComponent, canActivate:[UserGuard]},
-  {path: 'edit', component: EditformComponent, canActivate:[UserGuard]},
+  {path: 'edit/:user_id', component: EditformComponent},
+  {path: 'edit', component: EditformComponent},
   {path: 'thanks', component: RedirectComponent },
   {path: 'donate', component: MakeDonationComponent}
-  
 ];
 
 

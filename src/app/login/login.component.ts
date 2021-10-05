@@ -2,17 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthguardService } from '../auth.service';
 import { RegisterUserService } from '../register-user.service';
+import { ShareddataService } from '../shareddata.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  providers: [RegisterUserService]
+  providers: [RegisterUserService, ShareddataService]
 })
 export class LoginComponent implements OnInit {
 
   register: any; 
   input: any;
+
+  donations: any;
 
   invalidCredentialMsg: string | undefined;
   username: string | undefined;
@@ -22,10 +25,11 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthguardService, 
               private router: Router, 
               private activatedRoute: ActivatedRoute,
-              private registerUserService: RegisterUserService) {}
+              private registerUserService: RegisterUserService,
+              private sharingService: ShareddataService) {}
 
   ngOnInit() {
-
+    this.sharingService.setData(this.input);
     this.register = {
       username: '',
       first_name: '',
@@ -53,9 +57,13 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    this.registerUserService.loginUser(this.input).subscribe(
-      
 
+    console.log("THIS IS DATA")
+    this.sharingService.setData("hello")
+    
+
+
+    this.registerUserService.loginUser(this.input).subscribe(
       response => {
         this.authService.login();
         this.router.navigate( [this.retUrl]);
@@ -71,18 +79,5 @@ export class LoginComponent implements OnInit {
   }
 
 
-  // onFormSubmit(loginForm: any) {
-  //   this.authService.login(loginForm.value.username, loginForm.value.password).subscribe(
-
-  //   data => {
-
-  //         if (this.retUrl!=null) {
-  //             this.router.navigate( [this.retUrl]);
-  //         } else {  
-  //             this.router.navigate( ['login']);
-  //         }
-          
-  //   });
-  // }
 
 }

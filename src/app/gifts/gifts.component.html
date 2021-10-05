@@ -1,7 +1,7 @@
 <div class= giftPage>
 <p class="heading"><strong>Gifts</strong></p>
 <form >
-    <div class="check">Check for monthly recurring gift</div>
+    <div class="check"></div>
         <div *ngFor="let donation of makeDonationData" class="container">
             <label for="GeneralDonation">{{donation.donationName}}</label>
             <input type="number" [formControl]="giftFill" id="GeneralDonation" /> 

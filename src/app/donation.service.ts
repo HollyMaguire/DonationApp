@@ -13,8 +13,12 @@ export class DonationService {
 
   getDonationData(): Observable<IDonation[]>{
     return this.http.get<IDonation[]>(this._url)
-  
    }
+
+  addDonation(args:any){
+    return this.http.post(this._url, args)
+  }
+
    errorHandler(error: HttpErrorResponse){
      return throwError(error.message || "Server Error")
 }

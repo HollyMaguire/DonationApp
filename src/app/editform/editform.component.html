@@ -1,34 +1,41 @@
 
 <p class="heading"><strong>User Information</strong></p>
+<form [formGroup]="exform">
 
     <div class="formContainer">
         <label> Username: </label>
-        <input type="text" class ="form-control" [(ngModel)] = "username" placeholder = "Enter Username">
+        <input formControlName="validation_username" type="text" class ="form-control" [(ngModel)] = "username" placeholder = "Enter Username">
+        <small *ngIf="exform.get('validation_username')?.invalid" class="text-danger">Username is required</small>
     </div>
 
     <div class="formContainer">
         <label> First Name: </label>
-        <input type="text" class ="form-control" [(ngModel)] = "first_name" placeholder = "Enter First Name">
+        <input formControlName="validation_name" type="text" class ="form-control" [(ngModel)] = "first_name" placeholder = "Enter First Name">
+        <small *ngIf="exform.get('validation_name')?.invalid" class="text-danger">Name is required</small>
     </div>
 
     <div class="formContainer">
         <label> Last Name: </label>
-        <input type="text" class ="form-control" [(ngModel)] = "last_name" placeholder = "Enter Last Name">
+        <input formControlName="validation_last" type="text" class ="form-control" [(ngModel)] = "last_name" placeholder = "Enter Last Name">
+        <small *ngIf="exform.get('validation_last')?.invalid" class="text-danger">Last name is required</small>
     </div>
 
     <div class="formContainer">
         <label> Email: </label>
-        <input type="text" class ="form-control" [(ngModel)] = "email" placeholder = "Enter Email">
+        <input formControlName="validation_email" type="text" class ="form-control" [(ngModel)] = "email" placeholder = "Enter Email">
+        <small *ngIf="exform.get('validation_email')?.invalid" class="text-danger">Email is required</small>
     </div>
 
     <div class="formContainer">
         <label> Password: </label>
-        <input type="text" class ="form-control" [(ngModel)] = "password" placeholder = "Enter password">
+        <input formControlName="validation_password" type="text" class ="form-control" [(ngModel)] = "password" placeholder = "Enter password">
+        <small *ngIf="exform.get('validation_password')?.invalid" class="text-danger">Password is required</small>
     </div>
 
     <div class="formContainer">
         <label> Role: </label>
-        <input type="text" class ="form-control" [(ngModel)] = "role" placeholder = "Enter role: admin/user">
+        <input formControlName="validation_role" type="text" class ="form-control" [(ngModel)] = "role" placeholder = "Enter role: admin/user">
+        <small *ngIf="exform.get('validation_role')?.invalid" class="text-danger">Role is required (admin/user)</small>
     </div>
 
     <button (click) = "AddUser()"  *ngIf="dep.id==0" class="btn btn-primary" value="Add/Update">Add</button>
@@ -36,7 +43,7 @@
 
 
 
-
+</form>
 <style>
 .EditPage{
   background: rgb(195,201,213);
